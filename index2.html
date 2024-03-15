@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Feliz día de la Mujer</title>
+    <link rel="stylesheet" href="./styleindex.css" />
+  </head>
+  <body>
+    <h1>Feliz día de la Mujer</h1>
+    <div class="button">
+      <button>
+        <a id="urlPrincipal" href="principal.html">Haz clic aquí</a>
+      </button>
+    </div>
+    <script>
+      //Creamos la instancia
+      const valores = window.location.search;
+      const urlParams = new URLSearchParams(valores);
+
+      //Accedemos a los valores
+      var name = urlParams.get("name");
+      console.log(name);
+      var urlPrincipal = document.getElementById("urlPrincipal");
+      urlPrincipal.href = 'principal.html?name='+name
+    </script>
+  </body>
+</html>
